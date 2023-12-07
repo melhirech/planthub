@@ -36,8 +36,9 @@ jobs:
     - run: chmod 0700 ~/.ssh ~/.ssh/*
     - run: echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
     - run: npm i -g yarn
-    - run: yarn
-    - run: yarn build
+    # - run: yarn
+    # - run: yarn build
     - run: rm -rf node_modules
     - run: rm -rf .git
     - run: rsync -ravO --no-perms --no-g --exclude=".*" . /var/www/planthub/
+    - run: cd /var/www/planthub/ && ls
