@@ -30,7 +30,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: apk add --update rsync
+    # - run: apk add --update rsync
     - run: mkdir -p ~/.ssh
     - run: cp /media/config/.ssh/*  ~/.ssh/
     - run: chmod 0700 ~/.ssh ~/.ssh/*
