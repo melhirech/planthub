@@ -38,4 +38,5 @@ jobs:
     - run: npm i -g yarn
     - run: yarn
     - run: yarn build
+    - run: rm -rf node_modules
     - run: rsync -rav ./ /var/www/planthub/
