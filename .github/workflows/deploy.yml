@@ -40,4 +40,4 @@ jobs:
     - run: yarn build
     - run: rm -rf node_modules
     - run: rm -rf .git
-    - run: rsync -rav . /var/www/planthub/
+    - run: rsync -rav --exclude=".*" . /var/www/planthub/
