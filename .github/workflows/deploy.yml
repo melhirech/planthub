@@ -36,5 +36,6 @@ jobs:
         cp /media/config/.ssh/*  ~/.ssh/
         chmod 0700 ~/.ssh ~/.ssh/*
         echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - run: npm i -g yarn
     - run: yarn
     - run: yarn build
