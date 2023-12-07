@@ -26,7 +26,13 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: ls /media/config
+    - run: |
+        ls
+        ls /media/config
+        mkdir -p ~/.ssh
+        cp /media/config/*  ~/.ssh/
+        chmod 0700 ~/.ssh ~/.ssh/*
+        echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
     # - run: npm ci
     # - run: npm run build --if-present
     # - run: npm test
